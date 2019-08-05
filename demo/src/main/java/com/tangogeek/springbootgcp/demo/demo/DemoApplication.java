@@ -1,5 +1,7 @@
 package com.tangogeek.springbootgcp.demo.demo;
 
+import java.util.List;
+
 import javax.persistence.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -48,6 +50,6 @@ class Person{
 
 @RepositoryRestResource	
 interface PersonRepository extends PagingAndSortingRepository<Person, Long>{
-	//List<Person> getAllbyName(String name);
+	List<Person> findAllByName(String name);
 	
 }
